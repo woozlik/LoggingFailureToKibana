@@ -1,6 +1,6 @@
-# Smava
-Demo maven autotest project that uses Page object pattern to encapsulate the features represented by a page
+# LoggingFailureToKibana
+Demo maven autotest project that writes logs to kinaba on failure. 
 
-## Stack: Java + JUnit
+## Stack: Java 8 + JUnit 4
 
 To run test: mvn clean test

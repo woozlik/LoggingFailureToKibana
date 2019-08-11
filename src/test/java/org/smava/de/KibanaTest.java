@@ -1,11 +1,11 @@
 package org.smava.de;
 
-import kibana.MyTestRunner;
+import kibana.Runner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith(MyTestRunner.class)
+@RunWith(Runner.class)
 public class KibanaTest {
     @Test
     public void userShouldBeAbleToAskForLoan() {

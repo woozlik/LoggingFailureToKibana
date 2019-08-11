@@ -8,21 +8,19 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.Statement;
 
-public class MyTestRunner extends BlockJUnit4ClassRunner {
+public class Runner extends BlockJUnit4ClassRunner {
 
-    public MyTestRunner(Class<?> klass) throws InitializationError {
+    public Runner(Class<?> klass) throws InitializationError {
         super(klass);
     }
 
     @Override
     public void run(RunNotifier notifier) {
-        System.out.println("Executing run()");
         //Add Listener. This will register our JUnit Listener.
         notifier.addListener(new KibanaTestLisener());
 
         //Get each test notifier
-        EachTestNotifier testNotifier = new EachTestNotifier(notifier,
-                getDescription());
+        EachTestNotifier testNotifier = new EachTestNotifier(notifier, getDescription());
         try {
             //In order capture testRunStarted method
             //at the very beginning of the test run, we will add below code.
